@@ -1,0 +1,29 @@
+.filter {
+  margin-bottom: 30px;
+}
+
+.filter input {
+  outline: 0;
+  margin: 0;
+  padding: 0 8px;
+  min-width: 200px;
+  height: 30px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: .8em;
+  line-height: 30px;
+  background-color: #fff;
+  border: 3px solid #333;
+}
+
+.filter button {
+  top: -5px;
+  left: -8px;
+}
+
+.filter button:active,
+.filter button.active,
+.filter button.active:hover {
+  top: 0px;
+  left: -3px;
+}

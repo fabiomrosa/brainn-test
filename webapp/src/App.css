@@ -1,0 +1,134 @@
+.app {
+  padding: 0 60px;
+  max-width: 1280px;
+}
+
+.app-header {
+  padding: 20px 0;
+}
+
+.app-title {
+  color: #333;
+  font-family: 'Patua One', cursive;
+  font-weight: normal;
+  font-size: 2.25em;
+}
+
+.app-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.app-title sup {
+  margin-left: 2px;
+  font-size: .6em;
+}
+
+.app-main {
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.app-main button {
+  position: relative;
+  outline: 0;
+  padding: 0 15px;
+  color: #333;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: .8em;
+  line-height: 30px;
+  background-color: #fff;
+  border: 3px solid #333;
+  border-radius: 0;
+  box-shadow: 5px 5px 0px 0px rgba(51,51,51,1);
+}
+
+.app-main button:disabled,
+.app-main button:hover:disabled {
+  color: #ccc;
+  background-color: #fff;
+  border: 3px solid #ccc;
+  box-shadow: 5px 5px 0px 0px rgba(204,204,204,1);
+}
+
+.app-main button:hover {
+  color: #f9fafb;
+  background-color: #777;
+}
+
+.app-main button:active,
+.app-main button.active,
+.app-main button.active:hover {
+  top: 5px;
+  left: 5px;
+  color: #fff;
+  background-color: #777;
+  border: 3px solid #333;
+  box-shadow: 0px 0px 0px 0px rgba(51,51,51,1);
+}
+
+.app-main button.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 0 center;
+  background-repeat: repeat-x;
+  background-size: 32px 100%;
+  background-color: #666;
+  background-image: -webkit-linear-gradient(285deg, transparent, transparent 30%, rgba(0, 0, 0, .15) 30%, rgba(0, 0, 0, .15) 70%, transparent 70%, transparent);
+  background-image: -moz-linear-gradient(285deg, transparent, transparent 30%, rgba(0, 0, 0, .15) 30%, rgba(0, 0, 0, .15) 70%, transparent 70%, transparent);
+  background-image: -ms-linear-gradient(285deg, transparent, transparent 30%, rgba(0, 0, 0, .15) 30%, rgba(0, 0, 0, .15) 70%, transparent 70%, transparent);
+  background-image: -o-linear-gradient(285deg, transparent, transparent 30%, rgba(0, 0, 0, .15) 30%, rgba(0, 0, 0, .15) 70%, transparent 70%, transparent);
+  background-image: linear-gradient(285deg, transparent, transparent 30%, rgba(0, 0, 0, .15) 30%, rgba(0, 0, 0, .15) 70%, transparent 70%, transparent);
+  -webkit-animation: active 0.8s linear 0s infinite;
+  -moz-animation: active 0.8s linear 0s infinite;
+  -o-animation: active 0.8s linear 0s infinite;
+  animation: active 0.8s linear 0s infinite;
+}
+
+@keyframes "active" {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: -32px 0;
+  }
+}
+@-webkit-keyframes "active" {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: -32px 0;
+  }
+}
+@-moz-keyframes active {
+  from {
+      background-position: 0 0;
+      -moz-background-position: 0 0;
+  }
+  to {
+      background-position: -32px 0;
+      -moz-background-position: -32px 0;
+  }
+}
+@-ms-keyframes "active" {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: -32px 0;
+  }
+}
+@-o-keyframes "active" {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: -32px 0;
+  }
+}

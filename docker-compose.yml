@@ -1,0 +1,46 @@
+version: '3'
+networks:
+  brainn:
+    driver: bridge
+services:
+  db:
+    container_name: db
+    environment:
+      - MONGO_DATA_DIR=/data/db
+    image: mongo:latest
+    networks:
+      - brainn
+    ports:
+      - "27017:27017"
+    volumes:
+      - "./data:/data/db"
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile-api
+    command: nodemon
+    container_name: api
+    depends_on:
+      - db
+    networks:
+      - brainn
+    ports:
+      - "4000:3000"
+    volumes:
+      - "./api:/usr/src/app"
+      - "/usr/src/app/node_modules"
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile-webapp
+    command: npm start
+    container_name: webapp
+    depends_on:
+      - api
+    networks:
+      - brainn
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./webapp:/usr/src/app"
+      - "/usr/src/app/node_modules"
